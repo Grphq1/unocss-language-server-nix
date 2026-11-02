@@ -26,7 +26,7 @@
       in {
         packages.default = pkgs.stdenv.mkDerivation (finalAttrs: {
           pname = "unocss-language-server";
-          version = "66.7.5";
+          version = "66.12.0";
 
           src = pkgs.fetchFromGitHub {
             owner = "unocss";
