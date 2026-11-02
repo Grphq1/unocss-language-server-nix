@@ -37,6 +37,11 @@
 
           env.CI = "true";
 
+          postPatch = ''
+            substituteInPlace pnpm-workspace.yaml \
+              --replace-fail "minimumReleaseAge: false" "minimumReleaseAge: 0"
+          '';
+
           pnpmDeps = pkgs.fetchPnpmDeps {
             inherit (finalAttrs) pname version src;
             hash = "sha256-kj9eioTstD+ahDjgup1RrGUxgqjTpcii3smj8eOxox8=";
