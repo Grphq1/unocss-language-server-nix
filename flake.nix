@@ -56,8 +56,6 @@
             typescript
           ];
 
-          pnpmInstallFlags = ["--ignore-scripts"];
-
           buildPhase = ''
             runHook preBuild
             pnpm --filter "@unocss/language-server..." --filter "./packages-presets/*" run build
